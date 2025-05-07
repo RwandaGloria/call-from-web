@@ -54,9 +54,7 @@ def call():
     if 'To' in request.form and request.form['To'] != twilio_number:
         print('outbound call')
         dial.number(request.form['To'])
-        response.append(dial)
-        twiml_response = '<?xml version="1.0" encoding="UTF-8"?>\n' + response.to_xml()
-        return twiml_response
+        return str(response.append(dial))
 
     return ''
 
