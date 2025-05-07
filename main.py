@@ -8,7 +8,6 @@ from twilio.twiml.voice_response import VoiceResponse, Dial
 from dotenv import load_dotenv
 import os
 import pprint as p
-
 load_dotenv()
 
 account_sid = os.environ['TWILIO_ACCOUNT_SID']
